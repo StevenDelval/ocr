@@ -1,0 +1,14 @@
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+opencv-python
+pytesseract
+reportlab
+streamlit
+fastapi
+unicorn
+gunicorn
+ipywidgets
+tqdm
