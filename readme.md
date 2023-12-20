@@ -4,7 +4,7 @@ ___
 Install the dependencies:
 
 ```consol
-pip install -r requirements.txt
+pip install -r requirements_legacy.txt
 ```
 
 
