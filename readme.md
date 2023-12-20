@@ -20,8 +20,8 @@ sudo apt install tesseract-ocr
 ```
 2. Choose the .traineddata file for the language you are interested in from this [GitHub repository](https://github.com/tesseract-ocr/tessdata/tree/main).
 3. Move the .traineddata file to the path where you have installed Tesseract-OCR, 
-```consol
-mv ~/Téléchargements/fra.traineddata /usr/share/tesseract-ocr/4.00/tessdata
+```shell
+mv yourpath/fra.traineddata /usr/share/tesseract-ocr/4.00/tessdata
 ```
 
 ___
