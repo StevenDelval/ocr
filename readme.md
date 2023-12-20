@@ -26,3 +26,4 @@ mv yourpath/fra.traineddata /usr/share/tesseract-ocr/4.00/tessdata
 ### Another option
 Follow this link [Install tesseract 5 on Ubuntu](https://techviewleo.com/how-to-install-tesseract-ocr-on-ubuntu/)
 ___
+[Report plus pdf](https://www.reportlab.com/docs/reportlab-userguide.pdf)
