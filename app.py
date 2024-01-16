@@ -137,5 +137,7 @@ def main():
         st.write(f"Date d'immarticulation actuelle  : {dates[2]}")
         st.write(f"D.2 : {result_d2[-1]}")
 
+        st.text_input("D2",result_d2,key="result_d2")
+
 if __name__ == "__main__":
     main()
