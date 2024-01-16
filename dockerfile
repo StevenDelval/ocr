@@ -20,4 +20,4 @@ RUN pip install --upgrade pip && \
 EXPOSE 8501
 
 # Command to run on container start
-CMD streamlit run app.py --server.address 0.0.0.0
+CMD streamlit run app.py --server.address 0.0.0.0 --server.port 80 
