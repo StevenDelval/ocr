@@ -12,3 +12,4 @@ unicorn
 gunicorn
 ipywidgets
 tqdm
+PyPDF2
