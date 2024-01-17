@@ -107,7 +107,7 @@ def main():
         N_immatriculation = None
         dates = []
         E_chara = []
-        print(text)
+        
         boxes = len(text['level'])
         # Process OCR results
         for i in range(boxes):
