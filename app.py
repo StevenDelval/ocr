@@ -8,8 +8,17 @@ from PyPDF2 import PdfWriter, PdfReader
 from io import BytesIO
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
+import os
 
-buffer = BytesIO()
+# Specify the directory path
+directory_path = "./img"
+
+# Check if the directory exists
+if not os.path.exists(directory_path):
+    # Create the directory if it does not exist
+    os.makedirs(directory_path)
+
+
 # Adding custom options
 custom_config = r'--oem 2 --psm 12 -l fra+eng'
 
@@ -166,7 +175,7 @@ def main():
         dict_var['points_Date_I'] = st.text_input("Date immarticulation actuelle",dict_var['points_Date_I'].upper(),key="points_Date_I")
         button = st.button("Confirmer")
         if button:
-
+            buffer = BytesIO()
             p = canvas.Canvas(buffer, pagesize=A4)
             dict_pos = {
                 'points_N_immatriculation':[50, 705],
