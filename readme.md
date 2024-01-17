@@ -16,7 +16,7 @@ pip install -r requirements_legacy.txt
 ## How to install tesseract-ocr on Ubuntu
 1. Run 
 ```consol
-sudo apt install tesseract-ocr 
+sudo apt install tesseract-ocr libtesseract5
 ```
 2. Choose the .traineddata file for the language you are interested in from this [GitHub repository](https://github.com/tesseract-ocr/tessdata/tree/main).
 3. Move the .traineddata file to the path where you have installed Tesseract-OCR, 
