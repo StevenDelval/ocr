@@ -126,8 +126,13 @@ regions_dict = {
     'points_titre_document': [(113, 0), (114, 15), (339, 15), (336, 0)],
     'points_d_2': [(38, 242), (38, 262), (359, 262), (359, 242)],
     'points_E': [(288, 276), (289, 293), (412, 295), (412, 275)],
-    'points_Date_de_1er_immarticulation': [(145, 37), (146, 50), (228, 51), (226, 36)]
+    'points_Date_de_1er_immarticulation': [(145, 37), (146, 50), (228, 51), (226, 36)],
+    'points_d_1' : [(38, 232), (39, 246), (203, 245), (203, 229)],
+    'points_d_3' : [(36, 279), (37, 293), (209, 290), (210, 278)],
+    'points_j_1' : [(135, 320), (136, 332), (203, 331), (204, 319)],
+    'points_Date_I' : [(31, 468), (32, 482), (117, 482), (116, 465)]
 }
+
 
 
 def main():
@@ -151,25 +156,33 @@ def main():
         
         # Print the results
 
-        dict_var['points_N_immatriculation'] = st.text_input("N°immatriculation",dict_var['points_N_immatriculation'],key="'points_N_immatriculation'")
-        dict_var['points_d_2'] = st.text_input("D.2",dict_var['points_d_2'],key="points_d_2")
-        dict_var['points_E'] = st.text_input("E",dict_var['points_E'],key="points_E")
-        dict_var['points_Date_de_1er_immarticulation'] = st.text_input("Date de 1er immarticulation",dict_var['points_Date_de_1er_immarticulation'],key="points_Date_de_1er_immarticulation")
+        dict_var['points_N_immatriculation'] = st.text_input("N°immatriculation",dict_var['points_N_immatriculation'].upper(),key="'points_N_immatriculation'")
+        dict_var['points_d_1'] = st.text_input("D.1",dict_var['points_d_1'].upper(),key="points_d_1")
+        dict_var['points_d_2'] = st.text_input("D.2",dict_var['points_d_2'].upper(),key="points_d_2")
+        dict_var['points_d_3'] = st.text_input("D.3",dict_var['points_d_3'].upper(),key="points_d_3")
+        dict_var['points_E'] = st.text_input("E",dict_var['points_E'].upper(),key="points_E")
+        dict_var['points_j_1'] = st.text_input("J.1",dict_var['points_j_1'].upper(),key="points_j_1")
+        dict_var['points_Date_de_1er_immarticulation'] = st.text_input("Date de 1er immarticulation",dict_var['points_Date_de_1er_immarticulation'].upper(),key="points_Date_de_1er_immarticulation")
+        dict_var['points_Date_I'] = st.text_input("Date immarticulation actuelle",dict_var['points_Date_I'].upper(),key="points_Date_I")
         button = st.button("Confirmer")
         if button:
 
             p = canvas.Canvas(buffer, pagesize=A4)
             dict_pos = {
                 'points_N_immatriculation':[50, 705],
+                'points_d_1': [50, 652],
                 'points_d_2': [50, 630],
+                'points_d_3': [225, 652],
                 'points_E': [50, 610],
-                'points_Date_de_1er_immarticulation': [445, 705]
+                'points_j_1': [227, 610],
+                'points_Date_de_1er_immarticulation': [445, 705],
+                'points_Date_I' : [307, 705],
             }
             for region_key in dict_pos.keys():
                 if "Date" not in region_key:
-                    p.drawString(*dict_pos[region_key], dict_var[region_key],charSpace=2)
+                    p.drawString(*dict_pos[region_key], dict_var[region_key].upper(),charSpace=2)
                 else:
-                    p.drawString(*dict_pos[region_key], dict_var[region_key].replace("/",""),charSpace=8.5)
+                    p.drawString(*dict_pos[region_key], dict_var[region_key].upper().replace("/",""),charSpace=8.5)
             p.showPage()
             p.save()
 
